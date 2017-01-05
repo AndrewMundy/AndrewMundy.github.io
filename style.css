@@ -1,0 +1,63 @@
+header {
+  text-align: center;
+  animation: static 5s linear 1s infinite;
+}
+.logo, .logo2, .logo3{
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 0 10em 15em 10em;
+  border-color: transparent transparent rgb(0,0,0) transparent;
+  animation: focus 25s linear 0s infinite alternate;
+  filter:blur(1px);
+}
+.logo2:hover, .logo3:hover, .logo:hover{
+  margin-top:-14.7em;
+  transform: rotate(0.005turn);
+  transition:0.5s ease;
+}
+
+.logo2, .logo3{
+  margin-top:-15em;
+}
+.logo {
+  opacity:0.3;
+}
+.logo2{
+  margin-right:6em;
+  opacity:0.1;
+}
+.logo3{
+  margin-left:6em;
+  opacity:0.5;
+}
+
+
+header .container {
+  padding-top: 100px;
+  padding-bottom: 70px;
+}
+
+header .intro-text .name {
+  display: block;
+  filter:blur(0.5px);
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 6em;
+  color:black;
+  margin-top:-0.6em;
+}
+
+@media (min-width: 100px) {
+  header .container {
+    padding-top: 50px;
+    padding-bottom: 70px;
+    max-width:400px;
+}
+
+@keyframes focus {
+  0% {filter:blur(4px);
+  5% {filter:blur(1px);}
+  100%{filter:blur(1px);}
+}
